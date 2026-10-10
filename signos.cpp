@@ -1,25 +1,18 @@
 #include <iostream>
-#include <string>
 
-// Función de la persona B
-std::string clasificarFrecuencia(int lpm) {
-    if (lpm < 60) {
-        return "bradicardia";
-    } else if (lpm <= 100) {
-        return "normal";
-    } else {
-        return "taquicardia";
-    }
+double fahrenheitACelsius(double f) {
+    return (f - 32) * 5.0 / 9.0;
 }
 
 int main() {
-    // Llamado a la función desde main
-    int lpm_prueba; // Puedes cambiar este valor para probar
-    std::cout << "Ingrese la frecuencia cardiaca (lpm): ";
-    std::cin >> lpm_prueba;
+    double f;
 
-    std::cout << "Frecuencia cardiaca (" << lpm_prueba << " lpm): " 
-              << clasificarFrecuencia(lpm_prueba) << std::endl;
+    std::cout << "Ingresa la temperatura en Fahrenheit: ";
+    std::cin >> f;
+   
+
+    std::cout << f << " grados Fahrenheit equivalen a "
+              << fahrenheitACelsius(f) << " grados Celsius." << std::endl;
 
     return 0;
 }
